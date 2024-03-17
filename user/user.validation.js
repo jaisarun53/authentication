@@ -21,3 +21,13 @@ export const addUserValidationSchema = Yup.object({
     .min(4, "Password must be at least 4 characters")
     .max(30, "Password must be at max 30 characters."),
 });
+
+export const loginUserValidationSchema = Yup.object({
+  email: Yup.string()
+    .email("must me valid email address.")
+    .required("eamail must be required")
+    .trim()
+    .lowercase()
+    .max(60, "email must be at max 60 character"),
+  password: Yup.string().required("password must be required").trim(),
+});
