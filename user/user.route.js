@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 import User from "./user.model.js";
 import bcrypt from "bcrypt";
 // register user
+
 router.post(
   "/user/register",
   async (req, res, next) => {
@@ -41,6 +42,7 @@ router.post(
   }
 );
 // login user
+
 router.post(
   "/user/login",
   async (req, res, next) => {

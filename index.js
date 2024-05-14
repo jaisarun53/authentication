@@ -12,7 +12,7 @@ connectDB();
 app.use(userRoutes);
 app.use(productRoutes);
 // network and ports
-const PORT = 8000;
+const PORT = 8001;
 app.listen(PORT, () => {
   console.log(`the app is listening on port ${PORT}`);
 });
