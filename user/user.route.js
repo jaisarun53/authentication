@@ -78,14 +78,18 @@ router.post(
     }
     // to remkove password from res
     user.password = undefined;
+
     // generate token
     // syntax
     // token jwt.sign(payload,signature)
+
     const token = jwt.sign({ email: user.email }, "9847892163arun");
     // send response
-    return res
-      .status(200)
-      .send({ message: "Login successfull", userDetail: user, token: token });
+    return res.status(200).send({
+      message: "Login successfull",
+      userDetail: user,
+      token: token,
+    });
   }
 );
 export default router;

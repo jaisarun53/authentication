@@ -7,14 +7,6 @@ const app = express();
 // to make app understand json
 app.use(express.json());
 
-// enable cors
-// cross origin resource sharing
-const corsOptions = {
-  origin: "http://localhost:5173",
-  optionsSuccessStatus: 200,
-};
-app.use(cors());
-
 // database connection
 connectDB();
 // register routes
